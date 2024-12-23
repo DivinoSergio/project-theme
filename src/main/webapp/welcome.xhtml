@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="jakarta.faces.facelets"
+    xmlns:f="jakarta.faces.core"
+    xmlns:h="jakarta.faces.html"
+	xmlns:p="http://primefaces.org/ui">
+		
+	<h:head>
+	</h:head>
+	
+	<body>
+		<p:panel header="Themes">
+			<h:form id="formList">
+				<p:commandButton value="Back" action="index?faces-redirect=true" 
+					styleClass="ui-button-raised ui-button-success" icon="pi pi-sitemap"/>
+
+				<p:dataTable id="tableList" rowKey="#{theme.name}" value="#{themeSwitcherBean.themes}" var="theme" 
+					rows="5" paginator="true" paginatorPosition="bottom" selectionMode="single">
+					<p:column headerText="Name">
+						<h:outputText value="#{theme.name}" />
+					</p:column>
+					<p:column headerText="Label">
+						<h:outputText value="#{theme.label}" />
+					</p:column>
+				</p:dataTable>
+			</h:form>
+		</p:panel>	
+	</body>
+</html>

@@ -1,0 +1,4 @@
+br\com\mendes\projecttheme\util\ThemeSwitcher$PropertyKeys.class
+br\com\mendes\projecttheme\controller\ThemeSwitcherBean.class
+br\com\mendes\projecttheme\util\ThemeSwitcher.class
+br\com\mendes\projecttheme\model\Theme.class
